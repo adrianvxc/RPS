@@ -67,9 +67,15 @@ function ComputerMove() {
 
 function Tezt() {
     var element = document.getElementById("umove");
-    element.classList.toggle("drop");
+    element.addEventListener("animationend", function(){
+        this.style.animation="";
+    })
+    element.style.animation = "drop .2s ease";
     var element2 = document.getElementById("emove");
-    element2.classList.toggle("drop");
+    element2.addEventListener("animationend", function(){
+        this.style.animation="";
+    })
+    element2.style.animation = "drop .2s ease";
     if (x == 0){
         if (y == 1){
             cwin()
