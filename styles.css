@@ -1,0 +1,101 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background:url(vs.svg);
+}
+
+.ct{
+    text-align: center;
+}
+
+.title{
+    font-size: 2em;
+    font-weight: bold;
+    color:white;
+    text-shadow: 0px 6px 1px rgba(0, 0, 0, 1.0);
+}
+
+img{
+    position: relative;
+    width: 40%;
+}
+
+.drop{
+    animation:drop .2s;
+}
+
+@keyframes drop{
+    from {top:0px}
+    to {top:20px}
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        width: 70%;
+    }
+    body {
+        background-size: 400%;
+    }
+}
+
+.gc{
+    display: grid;
+    font-size: 2em;
+    font-weight: bold;
+    grid-template-areas:
+    'x x x y y y'
+    'p p p c c c'
+    'm m m m m m';
+    padding: 5px;
+    color:white;
+    text-shadow: 0px 6px 1px rgba(0, 0, 0, 1.0);
+}
+
+.btn{
+    width:150px;
+    height:60px;
+    border-radius: 30px;
+    margin:10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid black;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.6);
+    background: white;
+}
+
+.btn:hover, .btn:focus{
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #00E996,#008FFF);
+    color:white;
+    border:none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.07);
+    transition: 0.1s ease-in-out;
+}
+
+
+
+.i1{
+    grid-area: x;
+}
+
+.i2{
+    grid-area: y;
+}
+
+.i3{
+    grid-area: p;
+}
+.i4{
+    grid-area: c;
+}
+.i5{
+    grid-area: m;
+}
+
+.gc > .ct {
+    text-align: center;
+}
